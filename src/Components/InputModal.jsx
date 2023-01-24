@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { updateItem, getItem } from "../Services/Nutrition.js" // check names
+import { updateItem, getItem } from "../Services/items.js" // check names
 import { display } from "../Screens/Today.jsx";
 
 export default function Input({ display }) {
