@@ -1,16 +1,16 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { updateItem, getItem } from "../Services/Nutrition.js" // check names
+import { updateItem, getItem } from "../Services/items.js" 
 import { display } from "../Screens/Today.jsx";
 
 export default function Input({ display }) {
   const [item, setItem] = useState({
     Name: "",
-    Carbs: 0,
-    Fats: 0,
-    Proteins: 0,
-    Quantity: 0,
-    Calories: 0,
+    Carbs: '',
+    Fats: '',
+    Proteins: '',
+    Quantity: '',
+    Calories: '',
     Notes: ""
   });
 
