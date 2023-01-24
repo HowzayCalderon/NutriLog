@@ -8,13 +8,13 @@ import Today from './Screens/Today.jsx'
 
 function App() {
   return (
-    <div>
+    <>
       <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='/history' element={<History />} />
         <Route path='/today' element={<Today />} />
       </Routes>
-    </div>
+    </>
   );
 }
 
