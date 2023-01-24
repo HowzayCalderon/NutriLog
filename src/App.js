@@ -1,14 +1,11 @@
 import './App.css';
-import { Route, Routes } from "react-router-dom";
+import React from 'react'
+
 
 function App() {
   return (
     <div>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/history" element={<History />} />
-        <Route path="/today" element = {<Today />} />
-      </Routes>
+
     </div>
   );
 }
