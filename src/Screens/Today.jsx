@@ -1,11 +1,14 @@
 import NavBar from '../Components/NavBar.jsx';
 import InputModal from '../Components/InputModal.jsx';
+import { createDay } from '../Services/Days.jsx'
 import { useState, useEffect } from "react";
 
 export default function Today() {
     const [toggle, setToggle] = useState(false);
     const [todaysMeals, setTodaysMeals] = useState([]);
 
+    const today = new Date();
+    console.log(today)
 
     const display = () => {
         if (!toggle) return setToggle(true);
@@ -13,9 +16,15 @@ export default function Today() {
     }
 
     useEffect(() => {
+        setTodaysMeals({
+          Date: today,
+          Items:  []
+        })
+    
+        console.log(todaysMeals)
         
         
-    }, [todaysMeals])
+    }, [])
 
     return (
         <div>
