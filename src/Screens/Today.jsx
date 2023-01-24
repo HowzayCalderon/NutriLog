@@ -12,9 +12,9 @@ export default function Today() {
         return setToggle(false)
     }
 
-    useEffect(() => {
-        fetchTodaysMeals();
-    })
+    // useEffect(() => {
+    //     fetchTodaysMeals();
+    // })
 
     return (
         <>
@@ -24,9 +24,9 @@ export default function Today() {
 
         <button onClick={() => display()}>New Log Entry</button>
 
-            {toggle && (
-                <InputModal />
-            )}
+            {(toggle && (
+                <InputModal display={display}/>
+            ))}
         
         <div className="todaysEntry">
         </div>
