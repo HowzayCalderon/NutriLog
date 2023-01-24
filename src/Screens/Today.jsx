@@ -12,9 +12,10 @@ export default function Today() {
         return setToggle(false)
     }
 
-    // useEffect(() => {
+    useEffect(() => {
         
-    // })
+        
+    }, [todaysMeals])
 
     return (
         <div>
@@ -29,6 +30,7 @@ export default function Today() {
             )}
         
         <div className="todaysEntry">
+            <h3>{todaysMeals}</h3>
         </div>
         </div>
         )
