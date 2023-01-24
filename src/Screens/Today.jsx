@@ -20,9 +20,9 @@ export default function Today() {
     return (
         <div>
         <NavBar />
-
+    
         <h1>Today</h1>
-
+    
         <button onClick={() => display()}>New Log Entry</button>
 
             {toggle && (
