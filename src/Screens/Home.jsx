@@ -1,9 +1,15 @@
-import React from 'react'
+
+import "../Screens/Home.css";
+import React from "react";
 
 function Home() {
+
   return (
-    <div>Home</div>
-  )
+    <div className="Home">
+     <h1>Home Page</h1>
+    </div>
+  );
 }
 
-export default Home
+export default Home;
+
