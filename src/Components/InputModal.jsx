@@ -6,7 +6,7 @@ import { display } from "../Screens/Today.jsx";
 
 export default function itemCreate({}) { 
   const [item, setItem] = useState({
-   
+    Name: "",
     Carbs: undefined,
     Fats: undefined,
     Proteins: undefined,
@@ -89,7 +89,7 @@ export default function itemCreate({}) {
           onChange={handleChange}
         />
         <button
-          onClick={createItem}
+          onClick={() => createItem()}
           type="submit">Log your item!</button>
       </form>
     </div>
