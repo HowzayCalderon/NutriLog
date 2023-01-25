@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { createItem } from "../Services/Items.js";
-import { display } from "../Screens/Today.jsx";
 
 export default function InputModal({ display }) {
   const [item, setItem] = useState({

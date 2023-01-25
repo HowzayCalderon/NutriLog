@@ -2,12 +2,13 @@ import NavBar from "../Components/NavBar.jsx";
 import InputModal from "../Components/InputModal.jsx";
 import { useState, useEffect } from "react";
 import { deleteItem, getItems, updateItem } from "../Services/Items.js";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 export default function Today() {
   const [toggle, setToggle] = useState(false);
   const [todaysMeals, setTodaysMeals] = useState([]);
 
+  let { id } = useParams();
   let navigate = useNavigate();
 
   useEffect(() => {

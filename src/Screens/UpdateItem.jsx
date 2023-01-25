@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { updateItem, getItem } from "../Services/Items.js";
-import { display } from "./Today.jsx";
-import { unstable_batchedUpdates } from "react-dom";
+
 
 export default function InputModal({ display }) {
   const [item, setItem] = useState({
