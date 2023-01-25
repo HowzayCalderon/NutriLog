@@ -63,10 +63,17 @@ export default function Today() {
 
       <div className="todaysEntry">
         {todaysMeals.map((meal) => {
-          return <p>{meal.Name}</p>;
+          
+          return (
+          <>
+          <p>
+            {meal.Name}
+            <button>Edit</button>
+            <button>Delete</button>
+            </p>
+          </>
+          )
         })}
-        <button>Edit</button>
-        <button>Delete</button>
       </div>
     </div>
   );

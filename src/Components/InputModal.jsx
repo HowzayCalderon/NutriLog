@@ -7,11 +7,11 @@ import { display } from "../Screens/Today.jsx";
 export default function InputModal({ display }) { 
   const [item, setItem] = useState({
     Name: "",
-    Carbs: undefined,
-    Fats: undefined,
-    Proteins: undefined,
-    Quantity: undefined,
-    Calories: undefined,
+    Carbs: "",
+    Fats: "",
+    Proteins: "",
+    Quantity: "",
+    Calories: "",
     Notes: " "
   });
 
@@ -20,12 +20,12 @@ export default function InputModal({ display }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     await createItem(item)
-    navigate(`/items/${item.Name}`, { replace: true });   //path is by item name
+    navigate('/today', { replace: true });
+    window.location.reload();
   };
 
   const handleChange = (e) => {
     const { value, name } = e.target;
-    // console.log(value, name)
 
     setItem((prev) => ({
       ...prev,
