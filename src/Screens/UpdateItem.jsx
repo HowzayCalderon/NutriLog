@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { createItem } from "../Services/Items.js";
-import { display } from "../Screens/Today.jsx";
+import { updateItem, getItem } from "../Services/Items.js";
+import { display } from "./Today.jsx";
+import { unstable_batchedUpdates } from "react-dom";
 
 export default function InputModal({ display }) {
   const [item, setItem] = useState({
@@ -14,13 +15,22 @@ export default function InputModal({ display }) {
     Notes: "",
   });
 
+  let { id } = useParams()
   let navigate = useNavigate();
+
+  useEffect(() => {
+    fetchItem();
+  }, []);
+
+  async function fetchItem() {
+    let oneItem = await getItem(id);
+    setCharacter(oneCharacter);
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await createItem(item);
-    navigate("/today", { replace: true });
-    // window.location.reload();
+    await updateItem(id, item);
+    navigate('/today', { replace: true })
   };
 
   const handleChange = (e) => {
@@ -34,8 +44,8 @@ export default function InputModal({ display }) {
 
   return (
     <div>
-      <h1>Item Create Screen</h1>
-      <form className="create-form" onSubmit={handleSubmit}>
+      <h1>Edit Item</h1>
+      <form className="edit-form" onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Enter item: "
@@ -85,8 +95,8 @@ export default function InputModal({ display }) {
           value={item.Notes}
           onChange={handleChange}
         />
-        <button onClick={() => createItem()} type="submit">
-          Log your item!
+        <button onClick={() => updateItem()} type="submit">
+          Update this item
         </button>
       </form>
     </div>
