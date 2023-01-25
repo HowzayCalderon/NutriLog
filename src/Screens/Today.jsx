@@ -52,9 +52,9 @@ export default function Today() {
     return setToggle(false);
   };
 
-  async function handleDelete() {
-    await deleteItem(todaysMeals[5]._id);
-    alert("item deleted")
+  async function handleDelete(id) {
+    await deleteItem(id);
+    alert("item deleted");
     navigate("/today", { replace: true });
     window.location.reload();
   }
@@ -71,16 +71,15 @@ export default function Today() {
 
       <div className="todaysEntry">
         {todaysMeals.map((meal) => {
-          
           return (
-          <>
-          <p>
-            {meal.Name}
-            <button>Edit</button>
-            <button onClick={() => handleDelete()}>Delete</button>
-            </p>
-          </>
-          )
+            <>
+              <p>
+                {meal.Name}
+                <button>Edit</button>
+                <button onClick={() => handleDelete(meal._id)}>Delete</button>
+              </p>
+            </>
+          );
         })}
       </div>
     </div>
