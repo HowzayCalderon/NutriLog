@@ -1,23 +1,17 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { updateItem, getItem } from "../Services/Items.js" 
+import { updateItem, getItem } from "../Services/Items.js";
 import { display } from "../Screens/Today.jsx";
 
 export default function Input({ display }) {
   const [item, setItem] = useState({
     Name: "",
-    Carbs: '',
-    Fats: '',
-    Proteins: '',
-    Quantity: '',
-    Calories: '',
-    
     Carbs: undefined,
     Fats: undefined,
     Proteins: undefined,
     Quantity: undefined,
     Calories: undefined,
-    Notes: ""
+    Notes: "",
   });
 
   let { id } = useParams();
@@ -34,7 +28,7 @@ export default function Input({ display }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await updateItem(id, item)
+    await updateItem(id, item);
     navigate(`/items/${item.Name}`, { replace: true });
   };
 
@@ -44,13 +38,11 @@ export default function Input({ display }) {
 
     setItem((prev) => ({
       ...prev,
-      [name]: value
-    }))
+      [name]: value,
+    }));
   };
 
-
   return (
-
     <div>
       <h1>Item Create Screen</h1>
       <form className="create-form" onSubmit={handleSubmit}>
@@ -104,9 +96,12 @@ export default function Input({ display }) {
           onChange={handleChange}
         />
         <button
-          onClick={createItem}
-          type="submit">Log your item!</button>
+          // onClick={createItem}
+          type="submit"
+        >
+          Log your item!
+        </button>
       </form>
     </div>
-  )
+  );
 }
