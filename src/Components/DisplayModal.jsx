@@ -1,5 +1,5 @@
 import { Link, useParams, useNavigate } from "react-router-dom";
-import { deleteItem, getItem } from "../Services/Nutrition.js";
+import { deleteItem, getItem } from "../Services/items.js";
 import { useState, useEffect } from "react";
 
 

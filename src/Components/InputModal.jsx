@@ -6,7 +6,6 @@ import { display } from "../Screens/Today.jsx";
 export default function Input({ display }) {
   const [item, setItem] = useState({
     Name: "",
-ron-dev
     Carbs: '',
     Fats: '',
     Proteins: '',
@@ -18,7 +17,6 @@ ron-dev
     Proteins: undefined,
     Quantity: undefined,
     Calories: undefined,
- dev
     Notes: ""
   });
 
