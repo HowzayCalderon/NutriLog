@@ -7,7 +7,7 @@ import { getItems } from "../Services/items.js";
 
 
 export default function History (){
-    const [item, setItem] = useState ([]);
+    const [day, setDay] = useState ([{}]);
     const [pastItems, setPastItems] = useState (false);
     const [page, setPage] = useState (0);
     // const oneDay = 86400;
@@ -20,7 +20,7 @@ export default function History (){
 function apiCall (){
     fetch("https://nutritionx-app.herokuapp.com/items")
         .then ((res)=> res.json())
-        .then((data)=> setItem(data));
+        .then((data)=> setDay(data));
 }
 useEffect(()=> {
     apiCall ();
@@ -34,7 +34,31 @@ function handleClick (pastItemInfo) {
     setPastItems (pastItemInfo);
     display();
 }
-    // export default function showDays (){
+    return(
+        
+        <div className= "History">
+            < NavBar />
+                <div className="information">
+                        <h3> {day.Calories} </h3>
+                    </div>
+  item.Name = raw.Name;
+  item.Calories = raw.Calories;
+  item.Carbs = raw.Carbs;
+  item.Fats = raw.Fats;
+  item.Proteins = raw.Proteins;
+  item.Quantity = raw.Quantity;
+  item.Notes = raw.Notes;
+        </div>
+        
+    )
+};
+
+
+// _id.timestamp() shows the date
+
+
+//example code for dates, needs work
+ // export default function showDays (){
     //     for (let i=0 ; i< Api.length; i ++){
     //         if (stuff[i].timestamp < yesterday && stuff[i].timestamp >= yesterday -1)
     //         push it in
@@ -44,24 +68,38 @@ function handleClick (pastItemInfo) {
     // }
 
 
-    return(
-        
-        <div className= "History">
-            < NavBar />
-            <p className='items'>
-                {item.slice(page, page + 7).map((item, index)=> (
-                    <div className= "item-container" onClick ={() => handleClick (item)} key ={index} >
 
+//example code for only showing seven days per page
+{/* <p className='items'>
+                {day.slice(page, page + 7).map((day, index)=> (
+                    <div className= "item-container" onClick ={() => handleClick (day)} key ={index} >
+                        <div className="information">
+                        <h3> {day.Calories} </h3>
                     </div>
+                    </div> 
                 ))}
-
-            </p>
-
-
-        </div>
-        
-    )
-};
+            </p> 
+        </div> */}
 
 
-// _id.timestamp() shows the date
+        {description ? (
+            <div className="modal">
+              <div className="modal-content">
+                <div className="appearance">
+                  <button className="modal-close-button"onClick={display}>Close</button>
+                  <p>Gender- {character.appearance.gender}</p>
+                  <p>Race- {character.appearance.race}</p>
+                  <p>Height- {character.appearance.height}</p>
+                </div>
+                <p>Weight- {character.appearance.weight}</p>
+                <p>Eye Color - {character.appearance.eyeColor}</p>
+                <p>Hair Color - {character.appearance.hairColor}</p>
+                
+                <Link to={`/characters/${character.name}/edit`}>
+                <button>Edit Character</button>
+                </Link>
+                <button onClick={handleDelete}>Destroy Character!</button>
+    
+              </div>
+            </div>
+          ) : null}
