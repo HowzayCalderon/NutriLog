@@ -4,7 +4,7 @@ import { createItem } from "../Services/Items.js";
 import { display } from "../Screens/Today.jsx";
 
 
-export default function itemCreate({}) { 
+export default function InputModal({ display }) { 
   const [item, setItem] = useState({
     Name: "",
     Carbs: undefined,
@@ -19,7 +19,7 @@ export default function itemCreate({}) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await updateItem(id, item)
+    await createItem(item)
     navigate(`/items/${item.Name}`, { replace: true });   //path is by item name
   };
 
