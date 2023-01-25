@@ -103,7 +103,9 @@ export default function Input({ display }) {
           value={item.Notes}
           onChange={handleChange}
         />
-        <button type="submit">Log your item!</button>
+        <button
+          onClick={createItem}
+          type="submit">Log your item!</button>
       </form>
     </div>
   )
