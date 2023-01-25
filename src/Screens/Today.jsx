@@ -1,11 +1,14 @@
 import NavBar from "../Components/NavBar.jsx";
 import InputModal from "../Components/InputModal.jsx";
 import { useState, useEffect } from "react";
-import { getItems } from "../Services/Items.js";
+import { deleteItem, getItems } from "../Services/Items.js";
+import { useNavigate } from "react-router-dom";
 
 export default function Today() {
   const [toggle, setToggle] = useState(false);
   const [todaysMeals, setTodaysMeals] = useState([]);
+
+  let navigate = useNavigate();
 
   useEffect(() => {
     async function fetchItems() {
@@ -49,7 +52,12 @@ export default function Today() {
     return setToggle(false);
   };
 
-  console.log({ todaysMeals });
+  async function handleDelete() {
+    await deleteItem(todaysMeals[5]._id);
+    alert("item deleted")
+    navigate("/today", { replace: true });
+    window.location.reload();
+  }
 
   return (
     <div>
@@ -69,7 +77,7 @@ export default function Today() {
           <p>
             {meal.Name}
             <button>Edit</button>
-            <button>Delete</button>
+            <button onClick={() => handleDelete()}>Delete</button>
             </p>
           </>
           )
