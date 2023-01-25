@@ -23,8 +23,10 @@ export default function InputModal({ display }) {
 
   async function fetchItem() {
     let oneItem = await getItem(id);
-    setCharacter(oneCharacter);
+    setItem(oneItem);
   }
+
+  console.log(item)
 
   const handleSubmit = async (e) => {
     e.preventDefault();
