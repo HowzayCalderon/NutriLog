@@ -1,4 +1,4 @@
-import api from "./apiConfig.js";
+import api from "./ApiConfig.js";
 
 export const getItems = async() => {     
     try{
