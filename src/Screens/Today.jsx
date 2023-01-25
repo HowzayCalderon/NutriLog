@@ -10,7 +10,7 @@ export default function Today() {
   useEffect(() => {
     async function fetchItems() {
       const allItems = await getItems();
-      setTodaysMeals(allItems)
+      setTodaysMeals(allItems);
     }
     fetchItems();
   }, []);
@@ -23,31 +23,33 @@ export default function Today() {
 
   // wrapper function that will return "today" at 12AM (00:00:00)
   function resetTime() {
-    date.setSeconds(0)
-    date.setMinutes(0)
-    date.setHours(0)
-    return date
+    date.setSeconds(0);
+    date.setMinutes(0);
+    date.setHours(0);
+    return date;
   }
 
-  resetTime()
+  resetTime();
 
   // assigns "today" @ 12AM to variable
-  const thisMorning = date.getTime()
+  const thisMorning = date.getTime();
 
   // adds 1 to the "date" of "today at 12AM", creating "tomorrow" @ 12AM
-  date.setDate(date.getDate() + 1)
+  date.setDate(date.getDate() + 1);
 
   // assigns the above to a variable
-  const tomorrowMorning = date.getTime()
+  const tomorrowMorning = date.getTime();
 
   // logic to begin to filter items to today page
-  if(now > thisMorning && now < tomorrowMorning){
+  if (now > thisMorning && now < tomorrowMorning) {
   }
 
   const display = () => {
     if (!toggle) return setToggle(true);
     return setToggle(false);
   };
+
+  console.log({ todaysMeals });
 
   return (
     <div>
@@ -60,10 +62,12 @@ export default function Today() {
       {toggle && <InputModal display={display} />}
 
       <div className="todaysEntry">
+        {todaysMeals.map((meal) => {
+          return <p>{meal.Name}</p>;
+        })}
         <button>Edit</button>
         <button>Delete</button>
       </div>
-
     </div>
   );
 }
