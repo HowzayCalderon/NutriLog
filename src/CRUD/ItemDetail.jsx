@@ -1,18 +1,17 @@
-import { Link, useParams, useNavigate } from "react-router-dom";
-import { deleteItem, getItem } from "../Services/Items.js";
 import { useState, useEffect } from "react";
+// import './ItemDetail.css'
+import { getItem, deleteItem } from "../Services/Items.js";
+import { useParams, Link, useNavigate } from "react-router-dom";
 
-
-export default function Display() { //modal edit/delete
-
-  const [item, setItem] = useState({});
+const ItemDetail = (props) => {
+  const [item, setItem] = useState(null)
 
   let { id } = useParams();
   let navigate = useNavigate();
 
   useEffect(() => {
     fetchItem();
-  }, []);
+  }, [])
 
   async function fetchItem() {
     let oneItem = await getItem(id);
@@ -34,11 +33,13 @@ export default function Display() { //modal edit/delete
       <p>{item.Calories}</p>
       <p>{item.Notes}</p>
       <div>
-        <Link to={`items/${item._id}/edit`}>
-          <button>Edit</button>
+        <Link to={`/characters/${character._id}/edit`}>
+          <button>Edit Character</button>
         </Link>
-        <button onClick={handleDelete}>Delete</button>
+        <button onClick={handleDelete}>Destroy Item!</button>
+
       </div>
+
     </div>
-  );
+  )
 }
