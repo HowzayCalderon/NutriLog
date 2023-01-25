@@ -1,16 +1,33 @@
 import NavBar from "../Components/NavBar.jsx";
 import InputModal from "../Components/InputModal.jsx";
-
-import { createDay } from "../Services/days.js";
-
 import { useState, useEffect } from "react";
 
 export default function Today() {
   const [toggle, setToggle] = useState(false);
   const [todaysMeals, setTodaysMeals] = useState([]);
 
-  const today = new Date();
-  console.log(today);
+  const date = new Date();
+
+  const now = date.getTime();
+
+  function resetTime() {
+    date.setSeconds(0)
+    date.setMinutes(0)
+    date.setHours(0)
+    return date
+  }
+
+  resetTime()
+
+  const thisMorning = date.getTime()
+
+  date.setDate(date.getDate() + 1)
+
+  const tomorrowMorning = date.getTime()
+
+  if(now > thisMorning && now < tomorrowMorning){
+    console.log(date.now())
+  }
 
   const display = () => {
     if (!toggle) return setToggle(true);
