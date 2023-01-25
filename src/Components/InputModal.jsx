@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { updateItem, getItem } from "../Services/items.js" 
+import { updateItem, getItem } from "../Services/Items.js" 
 import { display } from "../Screens/Today.jsx";
 
 export default function Input({ display }) {
@@ -103,7 +103,9 @@ export default function Input({ display }) {
           value={item.Notes}
           onChange={handleChange}
         />
-        <button type="submit">Log your item!</button>
+        <button
+          onClick={createItem}
+          type="submit">Log your item!</button>
       </form>
     </div>
   )

@@ -3,6 +3,7 @@ import "../Screens/Home.css";
 import React from "react";
 import NavBar from "../Components/NavBar"
 
+
 function Home() {
 
   return (
