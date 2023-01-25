@@ -76,7 +76,7 @@ export default function Today() {
             <>
               <h3>
                 {meal.Name}
-                <Link to={`/items/${id}`}>
+                <Link to={`/items/${meal._id}`}>
                 <button>Edit</button>
                 </Link>
                 <button onClick={() => handleDelete(meal._id)}>Delete</button>
