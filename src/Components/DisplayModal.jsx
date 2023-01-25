@@ -3,9 +3,9 @@ import { deleteItem, getItem } from "../Services/Items.js";
 import { useState, useEffect } from "react";
 
 
-export default function Display() {
+export default function Display() { //modal edit/delete
 
-  const [item, setItem] = useState({})
+  const [item, setItem] = useState({});
 
   let { id } = useParams();
   let navigate = useNavigate();
@@ -34,12 +34,11 @@ export default function Display() {
       <p>{item.Calories}</p>
       <p>{item.Notes}</p>
       <div>
-        {/* figure out link paths to use for edit character and handleDelete */}
         <Link to={`items/${item._id}/edit`}>
-          <button>edit item</button>
+          <button>Edit</button>
         </Link>
-        <button onClick={handleDelete}></button>
+        <button onClick={handleDelete}>Delete</button>
       </div>
     </div>
-  )
+  );
 }

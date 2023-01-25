@@ -1,7 +1,6 @@
 import NavBar from "../Components/NavBar.jsx";
 import InputModal from "../Components/InputModal.jsx";
 
-import { createDay } from "../Services/days.js";
 
 import { useState, useEffect } from "react";
 
