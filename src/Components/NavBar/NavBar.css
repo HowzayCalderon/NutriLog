@@ -1,3 +1,8 @@
+nav{
+  display: flex;
+  justify-content: space-around;
+  min-width: 100vw
+}
 .navbar-div {
     display: flex;
     justify-content: center;
@@ -7,15 +12,17 @@
     color:black;
     font-weight: 800;
     border-bottom: solid black;
-    position: fixed;
-    top: 15em;
+    /* position: fixed;
+    top: 15em; */
     background: transparent;
     backdrop-filter: blur(10px);
+    width:fit-content;
+    
   }
 .navbar-div ul {
     list-style: none;
-    display: grid;
-    grid-template-columns: repeat(6,1fr);
+    display: flex;
+    justify-content: space-around;
 }
   .navbar-item a {
     color: #000;
