@@ -1,9 +1,10 @@
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { deleteItem, getItem } from "../Services/Items.js";
 import { useState, useEffect } from "react";
+import * as FaIcons from "react-icons/fa";
 
-
-export default function Display() { //modal edit/delete
+export default function Display() {
+  //modal edit/delete
 
   const [item, setItem] = useState({});
 
@@ -37,7 +38,7 @@ export default function Display() { //modal edit/delete
         <Link to={`items/${item._id}/edit`}>
           <button>Edit</button>
         </Link>
-        <button onClick={handleDelete}>Delete</button>
+        <FaIcons.FaTrash onClick={handleDelete} />
       </div>
     </div>
   );

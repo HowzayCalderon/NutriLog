@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { updateItem, getItem } from "../../Services/Items.js";
 
-
 export default function InputModal({ display }) {
   const [item, setItem] = useState({
     Name: "",
@@ -14,7 +13,7 @@ export default function InputModal({ display }) {
     Notes: "",
   });
 
-  let { id } = useParams()
+  let { id } = useParams();
   let navigate = useNavigate();
 
   useEffect(() => {
@@ -26,12 +25,12 @@ export default function InputModal({ display }) {
     setItem(oneItem);
   }
 
-  console.log(item)
+  console.log(item);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     await updateItem(id, item);
-    navigate('/today', { replace: true })
+    navigate("/today", { replace: true });
   };
 
   const handleChange = (e) => {
