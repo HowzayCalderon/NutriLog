@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { updateItem, getItem } from "../../Services/Items.js";
+import "../UpdateItem/UpdateItem.css"
+import NavBar from "../../Components/NavBar/NavBar.jsx";
 
 export default function InputModal({ display }) {
   const [item, setItem] = useState({
@@ -43,16 +45,22 @@ export default function InputModal({ display }) {
   };
 
   return (
+    
+
     <div>
-      <h1>Edit Item</h1>
+      <h1 className="Nurilog">Nutrilog</h1>
+      <NavBar />
+      <h1 className="title">Edit Item</h1>
       <form className="edit-form" onSubmit={handleSubmit}>
-        <input
+        <ul> Name: </ul>
+        <input className="name"
           type="text"
           placeholder="Enter item: "
           name="Name"
           value={item.Name}
           onChange={handleChange}
         />
+        
         <input
           type="number"
           placeholder="Carbs: "

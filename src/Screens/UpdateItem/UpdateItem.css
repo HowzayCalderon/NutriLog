@@ -1,0 +1,17 @@
+.title{
+    text-align: center;
+}
+.edit-form{
+    /* list-style-position: inside; */
+    border: solid black;
+    position: absolute;
+width: 954px;
+height: 629px;
+left: 238px;
+top: 247px;
+
+}
+
+.name{
+    font-size: ;
+}
