@@ -6,21 +6,21 @@
     margin-top: 2rem
 }
 
+
+
 h2 {
-    margin: 1.5rem 0 2rem 0 !important
+    margin: 1.5rem 0 2rem 0
 }
 
 .photo-gallery {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
 }
 
 .photo-gallery1, .photo-gallery2, .photo-gallery3 {
     display: flex;
     padding: 3%;
     background-color: #F2E3A2;
-
 }
 
 .photo-gallery1:hover, .photo-gallery2:hover, 
@@ -37,11 +37,17 @@ h2 {
 }
 
 p {
+    font-size: 2vh;
     padding: 3%;
+}
+
+span {
+    font-weight: 900;
 }
 
 img {
     width: 20%;
+    height: 20%;
     border-radius: 100%;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
       
