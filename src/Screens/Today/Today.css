@@ -3,3 +3,9 @@
     border-color: black;
     border-style: solid;
 }
+
+.icon{
+    color: black;
+    cursor: pointer;
+    margin-left: 1em;
+}
