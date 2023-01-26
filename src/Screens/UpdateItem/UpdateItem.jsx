@@ -52,6 +52,7 @@ export default function InputModal({ display }) {
       <NavBar />
       <h1 className="title">Edit Item</h1>
       <form className="edit-form" onSubmit={handleSubmit}>
+        <div className="input">
         <ul> Name: </ul>
         <input className="name"
           type="text"
@@ -60,7 +61,7 @@ export default function InputModal({ display }) {
           value={item.Name}
           onChange={handleChange}
         />
-        
+        <ul> Carbohydrates: </ul>
         <input
           type="number"
           placeholder="Carbs: "
@@ -68,6 +69,7 @@ export default function InputModal({ display }) {
           value={item.Carbs}
           onChange={handleChange}
         />
+        <ul> Fats: </ul>
         <input
           type="number"
           placeholder="Fats: "
@@ -75,6 +77,7 @@ export default function InputModal({ display }) {
           value={item.Fats}
           onChange={handleChange}
         />
+        <ul> Protein: </ul>
         <input
           type="number"
           placeholder="Protein: "
@@ -82,6 +85,7 @@ export default function InputModal({ display }) {
           value={item.Proteins}
           onChange={handleChange}
         />
+        <ul> Quantity: </ul>
         <input
           type="number"
           placeholder="Quantity: "
@@ -89,6 +93,7 @@ export default function InputModal({ display }) {
           value={item.Quantity}
           onChange={handleChange}
         />
+        <ul> Calories: </ul>
         <input
           type="number"
           placeholder="Calories: "
@@ -96,6 +101,7 @@ export default function InputModal({ display }) {
           value={item.Calories}
           onChange={handleChange}
         />
+        <ul> Notes: </ul>
         <input
           type="text"
           placeholder="Enter notes: "
@@ -103,7 +109,9 @@ export default function InputModal({ display }) {
           value={item.Notes}
           onChange={handleChange}
         />
-        <button onClick={() => updateItem()} type="submit">
+        </div>
+        <br></br>
+        <button className='updateButton'onClick={() => updateItem()} type="submit">
           Update this item
         </button>
       </form>

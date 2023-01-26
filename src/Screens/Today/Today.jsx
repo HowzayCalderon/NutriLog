@@ -1,7 +1,7 @@
 import NavBar from "../../Components/NavBar/NavBar.jsx";
 import InputModal from "../../Components/InputModal.jsx";
 import { useState, useEffect } from "react";
-import { deleteItem, getItems, updateItem } from "../../Services/Items.js";
+import { deleteItem, getItems } from "../../Services/Items.js";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import "../Today/Today.css";
 import * as FaIcons from "react-icons/fa";
