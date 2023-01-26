@@ -21,6 +21,7 @@ h2 {
     display: flex;
     padding: 3%;
     background-color: #F2E3A2;
+    align-items: center;
 }
 
 .photo-gallery1:hover, .photo-gallery2:hover, 
@@ -50,5 +51,4 @@ img {
     height: 20%;
     border-radius: 100%;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-      
 }
