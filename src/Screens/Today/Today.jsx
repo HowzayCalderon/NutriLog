@@ -3,6 +3,7 @@ import InputModal from "../../Components/InputModal.jsx";
 import { useState, useEffect } from "react";
 import { deleteItem, getItems, updateItem } from "../../Services/Items.js";
 import { Link, useNavigate, useParams } from "react-router-dom";
+import "../Today/Today.css"
 
 export default function Today() {
   const [toggle, setToggle] = useState(false);
@@ -45,7 +46,7 @@ export default function Today() {
         {todaysMeals.map((meal) => {
           return (
             <>
-              <h3>
+              <h3 className="ListItem">
                 {meal.Name}
                 <Link to={`/items/${meal._id}`}>
                 <button>Edit</button>
@@ -53,6 +54,11 @@ export default function Today() {
                 <button onClick={() => handleDelete(meal._id)}>Delete</button>
                 <br></br>
                 <h5>calories: {meal.Calories}</h5>
+                <h5>Carbs: {meal.Carbs} g</h5>
+                <h5>Fats: {meal.Fats} g</h5>
+                <h5>Protein: {meal.Protein} g</h5>
+                <h5>Quantity: {meal.Quantity}</h5>
+                <h5>Notes: {meal.Notes}</h5>
               </h3>
             </>
           );
