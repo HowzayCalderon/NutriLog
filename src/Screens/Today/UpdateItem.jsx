@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { updateItem, getItem } from "../Services/Items.js";
+import { updateItem, getItem } from "../../Services/Items.js";
 
 
 export default function InputModal({ display }) {
