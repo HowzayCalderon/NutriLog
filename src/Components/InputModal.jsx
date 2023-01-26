@@ -84,7 +84,7 @@ export default function InputModal({ display }) {
           value={item.Notes}
           onChange={handleChange}
         />
-        <button onClick={() => createItem()} type="submit">
+        <button type="submit">
           Log your item!
         </button>
       </form>
