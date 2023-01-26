@@ -22,6 +22,10 @@ function Home() {
 
   return (
     <div className="Home">
+
+      <div className="nutrilog">
+        <h1>NutriLog</h1>
+      </div>
       <NavBar />
 
       <section className="hero">
