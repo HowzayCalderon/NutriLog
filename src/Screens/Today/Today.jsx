@@ -6,6 +6,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import "../Today/Today.css";
 import * as FaIcons from "react-icons/fa";
 import * as HiIcons from "react-icons/hi";
+import * as BiIcons from "react-icons/bi";
 
 export default function Today() {
   const [toggle, setToggle] = useState(false);
@@ -40,7 +41,7 @@ export default function Today() {
 
       <h1>Today</h1>
 
-      <button onClick={() => display()}>New Log Entry</button>
+      <BiIcons.BiAddToQueue className="icon" onClick={() => display()} />
 
       {toggle && <InputModal display={display} />}
 
@@ -51,9 +52,12 @@ export default function Today() {
               <h3 className="ListItem">
                 {meal.Name}
                 <Link to={`/items/${meal._id}`}>
-                  <HiIcons.HiPencil />
+                  <HiIcons.HiPencil className="icon" />
                 </Link>
-                <FaIcons.FaTrash onClick={() => handleDelete(meal._id)} />
+                <BiIcons.BiTrash
+                  className="icon"
+                  onClick={() => handleDelete(meal._id)}
+                />
                 <br></br>
                 <h5>Calories: {meal.Calories}</h5>
                 <h5>Carbs: {meal.Carbs} g</h5>
