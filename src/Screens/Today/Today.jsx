@@ -2,9 +2,10 @@ import NavBar from "../../Components/NavBar/NavBar.jsx";
 import InputModal from "../../Components/InputModal.jsx";
 import { useState, useEffect } from "react";
 import { deleteItem, getItems } from "../../Services/Items.js";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { deleteItem, getItems} from "../../Services/Items.js";
+import { Link, useNavigate } from "react-router-dom";
 import "../Today/Today.css";
-import * as FaIcons from "react-icons/fa";
 import * as HiIcons from "react-icons/hi";
 import * as BiIcons from "react-icons/bi";
 
@@ -12,7 +13,7 @@ export default function Today() {
   const [toggle, setToggle] = useState(false);
   const [todaysMeals, setTodaysMeals] = useState([]);
 
-  let { id } = useParams();
+//   let { id } = useParams();
   let navigate = useNavigate();
 
   useEffect(() => {
