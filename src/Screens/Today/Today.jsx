@@ -1,4 +1,4 @@
-import NavBar from "../../Components/NavBar.jsx";
+import NavBar from "../../Components/NavBar/NavBar.jsx";
 import InputModal from "../../Components/InputModal.jsx";
 import { useState, useEffect } from "react";
 import { deleteItem, getItems, updateItem } from "../../Services/Items.js";

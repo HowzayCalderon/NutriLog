@@ -1,11 +1,15 @@
 
 .ListItem {
-    border-color: black;
-    border-style: solid;
+    border: solid olive;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
 }
 
 .icon{
     color: black;
     cursor: pointer;
     margin-left: 1em;
+}
+.todaysEntry{
+    border: solid black;
 }
