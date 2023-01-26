@@ -47,8 +47,10 @@ export default function InputModal({ display }) {
   return (
     
 
-    <div>
-      <h1 className="Nurilog">Nutrilog</h1>
+    <div className="updateItemPage">
+      <div className="nutrilog">
+        <h1>NutriLog</h1>
+      </div>
       <NavBar />
       <h1 className="title">Edit Item</h1>
       <form className="edit-form" onSubmit={handleSubmit}>
@@ -61,7 +63,7 @@ export default function InputModal({ display }) {
           value={item.Name}
           onChange={handleChange}
         />
-        <ul> Carbohydrates: </ul>
+        <ul> Carbohydrates (g): </ul>
         <input
           type="number"
           placeholder="Carbs: "
@@ -69,7 +71,7 @@ export default function InputModal({ display }) {
           value={item.Carbs}
           onChange={handleChange}
         />
-        <ul> Fats: </ul>
+        <ul> Fats (g): </ul>
         <input
           type="number"
           placeholder="Fats: "
@@ -77,7 +79,7 @@ export default function InputModal({ display }) {
           value={item.Fats}
           onChange={handleChange}
         />
-        <ul> Protein: </ul>
+        <ul> Protein (g): </ul>
         <input
           type="number"
           placeholder="Protein: "

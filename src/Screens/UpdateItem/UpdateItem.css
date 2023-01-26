@@ -1,20 +1,49 @@
-.title{
-    /* text-align: center; */
+ .updateItemPage{
+    background-image: url(/src/Screens/UpdateItem/updateItemBackground.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100%;
+    /* opacity: 0.6; */
+}
+.Nutrilog{
     display: flex;
     justify-content: center;
+    font: "Segoe UI";
+    font-weight:normal;
+    font-size: 8em;
 }
+
+.title{
+    /* text-align: center; */
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    color:  #f84813;
+    -webkit-text-stroke: 1.5px rgba(.5,.5,.5,1);
+}
+
+
 .edit-form{
     /* list-style-position: inside; */
+    min-height: 100%;
+    position: center;
+    /* attachment: fixed; */
+    position: center;
     display: flex;
    flex-wrap: wrap;
    gap: 20px;
     border: solid black;
+    border-radius: 15px;
+    
     position:relative;
-width: 500px;
-height: 629px;
-left: 238px;
-top: 50px;
+    width: 500px;
+    height: 629px;
+    left: 238px;
+    
     justify-content: center;
+    background-color: white;
 
 }
 
@@ -23,9 +52,24 @@ top: 50px;
 }
 
 .updateButton{
-    margin-left: 500px;
+  border-radius: 10px;
+  background-color: #f84813;
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  /* opacity: 0.6; */
+  transition: 0.3s;
+  /* display: inline-block; */
+  text-decoration: none;
+  cursor: pointer;
     
 }
+
+
+
+
 
 .input{
     text-align: center;
