@@ -19,7 +19,7 @@ export default function InputModal({ display }) {
     e.preventDefault();
     await createItem(item);
     navigate("/today", { replace: true });
-    // window.location.reload();
+    window.location.reload();
   };
 
   const handleChange = (e) => {
