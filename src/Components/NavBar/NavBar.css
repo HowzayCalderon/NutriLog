@@ -14,7 +14,7 @@
   }
 .navbar-div ul {
     list-style: none;
-    display: flex;
+    display: grid;
     grid-template-columns: repeat(6,1fr);
 }
   .navbar-item a {
