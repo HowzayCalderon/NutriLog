@@ -36,11 +36,25 @@ export default function Today() {
 
   return (
     <div>
-      <NavBar />
+      <div className="nutrilog">
+        <h1>NutriLog</h1>
+      </div>
+      <div className="navbar-container">
+        <NavBar />
+      </div>
 
-      <h1>Today</h1>
+      <button className="entry-btn">
+        <BiIcons.BiAddToQueue onClick={() => display()} />
+      </button>
 
-      <BiIcons.BiAddToQueue className="icon" onClick={() => display()} />
+      <div className="categories">
+        <h3>Food Item</h3>
+        <h3>Carbohydrate (g)</h3>
+        <h3>Protein (g)</h3>
+        <h3>Fats (g)</h3>
+        <h3>Calories (kJ)</h3>
+        <h3>Quantity</h3>
+      </div>
 
       {toggle && <InputModal display={display} />}
 
@@ -48,23 +62,22 @@ export default function Today() {
         {todaysMeals.map((meal) => {
           return (
             <>
-              <h3 className="ListItem">
-                {meal.Name}
-                <Link to={`/items/${meal._id}`}>
-                  <HiIcons.HiPencil className="icon" />
+              <div className="ListItem">
+                <h5 id="m-name">{meal.Name}</h5>
+                <h5 id="m-carbs">{meal.Carbs}</h5>
+                <h5 id="m-pro">{meal.Proteins}</h5>
+                <h5 id="m-fats">{meal.Fats}</h5>
+                <h5 id="m-cal">{meal.Calories}</h5>
+                <h5 id="m-quan">{meal.Quantity}</h5>
+                {/* <h5>Notes: {meal.Notes}</h5> */}
+                <Link id="pencil" to={`/items/${meal._id}`}>
+                  <HiIcons.HiPencil />
                 </Link>
                 <BiIcons.BiTrash
-                  className="icon"
+                  id="trash"
                   onClick={() => handleDelete(meal._id)}
                 />
-                <br></br>
-                <h5>Calories: {meal.Calories}</h5>
-                <h5>Carbs: {meal.Carbs} g</h5>
-                <h5>Fats: {meal.Fats} g</h5>
-                <h5>Protein: {meal.Protein} g</h5>
-                <h5>Quantity: {meal.Quantity}</h5>
-                <h5>Notes: {meal.Notes}</h5>
-              </h3>
+              </div>
             </>
           );
         })}

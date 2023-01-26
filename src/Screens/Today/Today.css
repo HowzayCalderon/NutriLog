@@ -1,15 +1,87 @@
 
 .ListItem {
-    border: solid olive;
+    /* border: solid olive; */
+    display: grid;
+    align-items: center;
+    grid-template-areas: 
+    'name carbs protein calories quantity'
+    
+}
+.ListItem h5{
+    /* margin: 0em 2em 0em 8em; */
+    /* border: solid black; */
+}
+#m-name{
+grid-area: name;
+position: relative;
+/* left: 1em */
+}
+#m-carbs{
+grid-area: carbs;
+/* margin-left: 6em;
+margin-right: 4em; */
+}
+#m-pro{
+grid-area: protein;
+}
+#m-fats{
+grid-area: fats
+}
+#m-cal{
+grid-area: calories
+}
+#m-quan{
+grid-area: quantity;
+}
+/* #trash{
+    grid-area: trash;
+    margin: 0em;
+    padding: 0px;
+    border: solid black;
+}  */
+/* #pencil{
+    grid-area: pencil;
+} */
+.icon{
+    color: black;
+    cursor: pointer;
+}
+.entry-btn{
+    background-color: rgb(91, 192, 222);
+    border: solid rgb(91, 192, 222);
+    cursor: pointer;
+    width: 5em;
+    height: 2em;
+    font-size: 1.5em;
+    color: white;
+    margin: 1.5em 0 1.5em 0;
+}
+.todaysEntry{
+    /* border: solid black; */
+}
+
+.navbar-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.nutrilog{
+    
+    display: flex;
+    justify-content: center;
+}
+.nutrilog h1{
+    font: "Segoe UI";
+    font-weight:normal;
+    font-size: 8em;
+}
+.categories{
+    border-bottom: solid black;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
 }
 
-.icon{
-    color: black;
-    cursor: pointer;
-    margin-left: 1em;
-}
-.todaysEntry{
-    border: solid black;
+.categories h3{
+    margin: 1em 1em 1em 1em;
 }
