@@ -1,10 +1,10 @@
 import './App.css';
 import React from 'react'
 import { Route, Routes } from "react-router-dom"
-import Home from './Screens/Home.jsx';
-import History from './Screens/History.jsx'
-import Today from './Screens/Today.jsx'
-import UpdateItem from './Screens/UpdateItem.jsx';
+import Home from '../src/Screens/Home/Home.jsx';
+import History from './Screens/History/History.jsx'
+import Today from './Screens/Today/Today.jsx'
+import UpdateItem from './Screens/Today/UpdateItem.jsx';
 
 
 function App() {
