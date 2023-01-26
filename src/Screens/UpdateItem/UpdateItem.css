@@ -7,12 +7,15 @@
     min-height: 100%;
     /* opacity: 0.6; */
 }
-.Nutrilog{
+.nutrilog{
     display: flex;
     justify-content: center;
     font: "Segoe UI";
     font-weight:normal;
-    font-size: 8em;
+    font-size: 10px;
+    background: transparent;
+    backdrop-filter: blur(9px);
+    /* border: black solid; */
 }
 
 .title{
@@ -26,6 +29,8 @@
 
 
 .edit-form{
+    display: flex;
+    flex-direction: column;
     min-height: 100%;
     gap: 20px;
     border: solid black;
@@ -43,19 +48,19 @@
 }
 
 .updateButton{
-  border-radius: 10px;
+  border-radius: 5px;
   background-color: #f84813;
   border: none;
   color: white;
   text-align: center;
   font-size: 16px;
-  margin: 4px 2px;
+  right: 500px;
+  width: 500px;
+  height: 50px;
   /* opacity: 0.6; */
   transition: 0.3s;
-  /* display: inline-block; */
   text-decoration: none;
   cursor: pointer;
-    
 }
 
 

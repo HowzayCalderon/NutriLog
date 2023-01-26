@@ -112,11 +112,13 @@ export default function InputModal({ display }) {
           onChange={handleChange}
         />
         </div>
-        <br></br>
+        <div className="button">
         <button className='updateButton'onClick={() => updateItem()} type="submit">
           Update this item
         </button>
+        </div>
       </form>
+      
     </div>
   );
 }
