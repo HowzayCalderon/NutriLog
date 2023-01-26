@@ -11,7 +11,7 @@ export default function Today() {
   const [toggle, setToggle] = useState(false);
   const [todaysMeals, setTodaysMeals] = useState([]);
 
-  let { id } = useParams();
+//   let { id } = useParams();
   let navigate = useNavigate();
 
   useEffect(() => {
