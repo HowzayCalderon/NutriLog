@@ -11,10 +11,10 @@ function NavBar() {
             <Link to="/">Home</Link>
           </li>
           <li className="navbar-item">
-            <Link to="/history">History</Link>
+            <Link to="/today">Today</Link>
           </li>
           <li className="navbar-item">
-            <Link to="/today">Today</Link>
+            <Link to="/history">History</Link>
           </li>
         </ul>
       </nav>
