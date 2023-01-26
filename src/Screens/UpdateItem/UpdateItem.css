@@ -1,0 +1,34 @@
+.title{
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+}
+.edit-form{
+    /* list-style-position: inside; */
+    display: flex;
+   flex-wrap: wrap;
+   gap: 20px;
+    border: solid black;
+    position:relative;
+width: 500px;
+height: 629px;
+left: 238px;
+top: 50px;
+    justify-content: center;
+
+}
+
+.name{
+    font-size: 20px;
+}
+
+.updateButton{
+    margin-left: 500px;
+    
+}
+
+.input{
+    text-align: center;
+    height: 200px;
+    flex: 1 0 200px;
+}
