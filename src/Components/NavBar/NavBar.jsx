@@ -14,7 +14,8 @@ function NavBar(props) {
             <Link to="/today">Today</Link>
           </li>
           <li className="navbar-item">
-            <Link to="/fitness">Fitness</Link>
+            <a href="https://reposfit.netlify.app/
+" target="_blank">ReposFit</a>
           </li>
         </ul>
       </nav>
