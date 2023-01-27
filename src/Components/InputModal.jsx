@@ -81,7 +81,7 @@ export default function InputModal( {setToggle} ) {
         <input type="submit" value="Log your item!" />
 
         <button onClick={() => setToggle()}>Close</button>
-
+        
         </div>
       </form>
       
