@@ -38,7 +38,7 @@ export default function Display() {
         <Link to={`items/${item._id}/edit`}>
           <button>Edit</button>
         </Link>
-        <FaIcons.FaTrash onClick={handleDelete} />
+        <button onClick={handleDelete}>Delete</button>
       </div>
     </div>
   );

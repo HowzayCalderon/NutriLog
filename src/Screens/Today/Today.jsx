@@ -48,21 +48,20 @@ export default function Today() {
         <BiIcons.BiAddToQueue onClick={() => display()} />
       </button>
 
-      <div className="categories">
-        <h3>Food Item</h3>
-        <h3>Carbohydrate (g)</h3>
-        <h3>Protein (g)</h3>
-        <h3>Fats (g)</h3>
-        <h3>Calories (kJ)</h3>
-        <h3>Quantity</h3>
-      </div>
-
       {toggle && <InputModal display={display} />}
 
       <div className="todaysEntry">
-        {todaysMeals.map((meal) => {
-          return (
-            <>
+        <div className="categories">
+          <h3 id="food-cat">Food Item</h3>
+          <h3 id="carb-cat">Carbohydrate (g)</h3>
+          <h3 id="pro-cat">Protein (g)</h3>
+          <h3 id="fats-cat">Fats (g)</h3>
+          <h3 id="cal-cat">Calories (kJ)</h3>
+          <h3 id="quan-cat">Quantity</h3>
+        </div>
+        <div className="listItem-container">
+          {todaysMeals.map((meal) => {
+            return (
               <div className="ListItem">
                 <h5 id="m-name">{meal.Name}</h5>
                 <h5 id="m-carbs">{meal.Carbs}</h5>
@@ -70,18 +69,21 @@ export default function Today() {
                 <h5 id="m-fats">{meal.Fats}</h5>
                 <h5 id="m-cal">{meal.Calories}</h5>
                 <h5 id="m-quan">{meal.Quantity}</h5>
+                <div className="btn-tainer">
+                  <Link id="pencil" className="icon" to={`/items/${meal._id}`}>
+                    <HiIcons.HiPencil />
+                  </Link>
+                  <BiIcons.BiTrash
+                    id="trash"
+                    className="icon"
+                    onClick={() => handleDelete(meal._id)}
+                  />
+                </div>
                 {/* <h5>Notes: {meal.Notes}</h5> */}
-                <Link id="pencil" to={`/items/${meal._id}`}>
-                  <HiIcons.HiPencil />
-                </Link>
-                <BiIcons.BiTrash
-                  id="trash"
-                  onClick={() => handleDelete(meal._id)}
-                />
               </div>
-            </>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
     </div>
   );

@@ -1,47 +1,25 @@
 
 .ListItem {
-    /* border: solid olive; */
     display: grid;
-    align-items: center;
-    grid-template-areas: 
-    'name carbs protein calories quantity'
-    
+    grid-template-columns: repeat(6, 1fr);
+    width: 100%;
 }
-.ListItem h5{
-    /* margin: 0em 2em 0em 8em; */
-    /* border: solid black; */
+
+
+.listItem-container{
+    width: 100vw;
+    display: flex;
+    flex-direction: column
 }
-#m-name{
-grid-area: name;
-position: relative;
-/* left: 1em */
+
+.categories{
+    border-bottom: solid black;
+    display: grid;
+    grid-template-columns: repeat(6, 1.5fr);
+    margin-bottom: 2em;
 }
-#m-carbs{
-grid-area: carbs;
-/* margin-left: 6em;
-margin-right: 4em; */
-}
-#m-pro{
-grid-area: protein;
-}
-#m-fats{
-grid-area: fats
-}
-#m-cal{
-grid-area: calories
-}
-#m-quan{
-grid-area: quantity;
-}
-/* #trash{
-    grid-area: trash;
-    margin: 0em;
-    padding: 0px;
-    border: solid black;
-}  */
-/* #pencil{
-    grid-area: pencil;
-} */
+
+
 .icon{
     color: black;
     cursor: pointer;
@@ -55,9 +33,6 @@ grid-area: quantity;
     font-size: 1.5em;
     color: white;
     margin: 1.5em 0 1.5em 0;
-}
-.todaysEntry{
-    /* border: solid black; */
 }
 
 .navbar-container{
@@ -76,12 +51,8 @@ grid-area: quantity;
     font-weight:normal;
     font-size: 8em;
 }
-.categories{
-    border-bottom: solid black;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-}
 
-.categories h3{
-    margin: 1em 1em 1em 1em;
+.btn-tainer{
+    width: 15px;
+    grid-area: btns;
 }

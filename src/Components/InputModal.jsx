@@ -51,13 +51,6 @@ export default function InputModal({ display }) {
         />
         <input
           type="number"
-          placeholder="Fats: "
-          name="Fats"
-          value={item.Fats}
-          onChange={handleChange}
-        />
-        <input
-          type="number"
           placeholder="Protein: "
           name="Proteins"
           value={item.Proteins}
@@ -65,9 +58,9 @@ export default function InputModal({ display }) {
         />
         <input
           type="number"
-          placeholder="Quantity: "
-          name="Quantity"
-          value={item.Quantity}
+          placeholder="Fats: "
+          name="Fats"
+          value={item.Fats}
           onChange={handleChange}
         />
         <input
@@ -78,15 +71,20 @@ export default function InputModal({ display }) {
           onChange={handleChange}
         />
         <input
+          type="number"
+          placeholder="Quantity: "
+          name="Quantity"
+          value={item.Quantity}
+          onChange={handleChange}
+        />
+        <input
           type="text"
           placeholder="Enter notes: "
           name="Notes"
           value={item.Notes}
           onChange={handleChange}
         />
-        <button type="submit">
-          Log your item!
-        </button>
+        <button type="submit">Log your item!</button>
       </form>
     </div>
   );

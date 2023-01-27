@@ -7,8 +7,8 @@
     color:black;
     font-weight: 800;
     border-bottom: solid black;
-    position: fixed;
-    top: 15em;
+    /* position: fixed; */
+    /* top: 15em; */
     background: transparent;
     backdrop-filter: blur(10px);
   }
@@ -25,6 +25,13 @@
     transition: color 0.3s ease-out;
     margin-right: 5em;
   }
+
   .navbar-item a:hover {
     color:  white;
   }
+  .navbar-item a:active {
+    color:  white;
+    text-decoration: solid;
+  }
+
+  
