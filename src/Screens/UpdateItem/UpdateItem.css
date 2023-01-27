@@ -1,0 +1,74 @@
+ .updateItemPage{
+    background-image: url(/src/Screens/UpdateItem/updateItemBackground.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100%;
+    /* opacity: 0.6; */
+}
+.nutrilog{
+    display: flex;
+    justify-content: center;
+    font: "Segoe UI";
+    font-weight:normal;
+    font-size: 10px;
+    background: transparent;
+    backdrop-filter: blur(9px);
+    /* border: black solid; */
+}
+
+.title{
+    /* text-align: center; */
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    color:  #f84813;
+    -webkit-text-stroke: 1.5px rgba(.5,.5,.5,1);
+}
+
+
+.edit-form{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    gap: 20px;
+    border: solid black;
+    border-radius: 15px;
+    width: 500px;
+    height: 629px;
+    left: 238px;
+    margin: 0 auto;
+    background-color: white;
+
+}
+
+.name{
+    font-size: 20px;
+}
+
+.updateButton{
+  border-radius: 5px;
+  background-color: #f84813;
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  right: 500px;
+  width: 500px;
+  height: 50px;
+  /* opacity: 0.6; */
+  transition: 0.3s;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+
+
+.input{
+    text-align: center;
+    height: 200px;
+    flex: 1 0 200px;
+}

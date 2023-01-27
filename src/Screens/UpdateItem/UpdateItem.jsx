@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { updateItem, getItem } from "../../Services/Items.js";
+import "../UpdateItem/UpdateItem.css"
+import NavBar from "../../Components/NavBar/NavBar.jsx";
 
 export default function InputModal({ display }) {
   const [item, setItem] = useState({
@@ -43,16 +45,25 @@ export default function InputModal({ display }) {
   };
 
   return (
-    <div>
-      <h1>Edit Item</h1>
+    
+
+    <div className="updateItemPage">
+      <div className="nutrilog">
+        <h1>NutriLog</h1>
+      </div>
+      <NavBar />
+      <h1 className="title">Edit Item</h1>
       <form className="edit-form" onSubmit={handleSubmit}>
-        <input
+        <div className="input">
+        <ul> Name: </ul>
+        <input className="name"
           type="text"
           placeholder="Enter item: "
           name="Name"
           value={item.Name}
           onChange={handleChange}
         />
+        <ul> Carbohydrates (g): </ul>
         <input
           type="number"
           placeholder="Carbs: "
@@ -60,6 +71,7 @@ export default function InputModal({ display }) {
           value={item.Carbs}
           onChange={handleChange}
         />
+        <ul> Fats (g): </ul>
         <input
           type="number"
           placeholder="Fats: "
@@ -67,6 +79,7 @@ export default function InputModal({ display }) {
           value={item.Fats}
           onChange={handleChange}
         />
+        <ul> Protein (g): </ul>
         <input
           type="number"
           placeholder="Protein: "
@@ -74,6 +87,7 @@ export default function InputModal({ display }) {
           value={item.Proteins}
           onChange={handleChange}
         />
+        <ul> Quantity: </ul>
         <input
           type="number"
           placeholder="Quantity: "
@@ -81,6 +95,7 @@ export default function InputModal({ display }) {
           value={item.Quantity}
           onChange={handleChange}
         />
+        <ul> Calories: </ul>
         <input
           type="number"
           placeholder="Calories: "
@@ -88,6 +103,7 @@ export default function InputModal({ display }) {
           value={item.Calories}
           onChange={handleChange}
         />
+        <ul> Notes: </ul>
         <input
           type="text"
           placeholder="Enter notes: "
@@ -95,10 +111,14 @@ export default function InputModal({ display }) {
           value={item.Notes}
           onChange={handleChange}
         />
-        <button onClick={() => updateItem()} type="submit">
+        </div>
+        <div className="button">
+        <button className='updateButton'onClick={() => updateItem()} type="submit">
           Update this item
         </button>
+        </div>
       </form>
+      
     </div>
   );
 }

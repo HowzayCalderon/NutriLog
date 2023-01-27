@@ -1,70 +1,42 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<br>
 
-## Available Scripts
+# NutriLog
 
-In the project directory, you can run:
+This straightforward nutrition app was designed as a centralized place for users to keep track of their diet throughout the day. Users can create new items using a form, and edit or delete items from the Today page using the corresponding icons.
 
-### `npm start`
+(((At the end of each day, meals are automatically archived on the History page where they can be retrieved for future reference)))
+<br>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Getting Around
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Use the navigation bar at the top of the page to explore the Home, Today, and History pages.
 
-### `npm test`
+<br>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies Implemented
 
-### `npm run build`
+| Backend          	| Frontend                               	|
+|------------------	|----------------------------------------	|
+| * node           	| * JavaScript, HTML, CSS, Markdown      	|
+| * nodemon        	| * react, -router-dom, -scripts, -icons 	|
+| * express        	| * axios                                	|
+| * mongoose       	| * netlify                              	|
+| * mongoDB, Atlas 	| * Microsoft Typography                 	|
+| * Heroku         	|                                        	|
+| * JavaScript     	|                                        	|
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<br>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Future Development
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Initially, the developers for this site had planned for a more specific set of features focused on the items on a given day and ways to archive those items. Future features will include:
 
-### `npm run eject`
+* Only items entered on the current day will populate the "today page".
+* Calorie, fat, protein, and carb calculators to calculate the daily totals.
+* A history page with links to each days' entries.
+* Nutritional values that auto-fill when you begin typing the name of a food.
+* "Meet the devs" section toward the bottom of the homepage.
+* UX design like the wireframe below.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![Today Screen Wireframe](./imgs/Today-Wireframe.png)
