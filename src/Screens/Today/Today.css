@@ -1,15 +1,20 @@
-
+*{
+    margin: 10px;
+}
 .ListItem {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     width: 100%;
+    
+    
 }
 
 
 .listItem-container{
-    width: 100vw;
+    width: 90vw;
     display: flex;
-    flex-direction: column
+    flex-direction: column;
+    border: solid rgb(36, 110, 133);
 }
 
 .categories{
@@ -54,7 +59,8 @@
 
 .btn-tainer{
     width: 15px;
-    grid-area: btns;
+    /* grid-area: btns; */
+    margin: 20px;
 }
 
 
@@ -72,17 +78,22 @@
 
 
 .modal-content{
+  display: grid;
+  justify-content: center;
+  max-width: 64em;
+    margin: 50 px;
+    text-align: center;
   border-radius: 20%;
-  margin-top: 20px;
-  text-align: center;
+  margin-top: 100px;
+  /* text-align: center; */
   color: white;
-  background-color: #4fb04f;
-  opacity: .9; 
+  background-color:  rgb(91, 192, 222);
+  opacity: .93; 
   position: absolute;
   left: 50%;
   top: 50%;
   height: 45vh;
-  width: 45vw;
+  width: 30vw;
   transform: translate(-50%, -50%);
   font-family:Arial, Helvetica, sans-serif;
   font-size: 23px;
