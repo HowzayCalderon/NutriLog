@@ -13,8 +13,8 @@ function NavBar(props) {
           <li className="navbar-item" id={props.Today}>
             <Link to="/today">Today</Link>
           </li>
-          <li className="navbar-item" id={props.History}>
-            <Link to="/history">History</Link>
+          <li className="navbar-item">
+            <Link to="/fitness">Fitness</Link>
           </li>
         </ul>
       </nav>

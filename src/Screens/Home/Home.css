@@ -6,10 +6,11 @@
     margin-top: 2rem
 }
 
-
-
 h2 {
-    margin: 1.5rem 0 2rem 0
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 100;
+    text-shadow: rgb(125, 125, 125) 1px 0 10px;    text-align: center;
+    margin: 2rem 0 2rem 0
 }
 
 .photo-gallery {
@@ -38,7 +39,9 @@ h2 {
 }
 
 p {
-    font-size: 2vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.7vh;
+    line-height: 2.5vh;
     padding: 3%;
 }
 

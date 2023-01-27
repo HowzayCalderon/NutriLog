@@ -4,9 +4,8 @@ import NavBar from "../../Components/NavBar/NavBar.jsx";
 import "./Home.css";
 
 function Home() {
-  let heading = "NutriLog";
-  let subheading =
-    "Log your daily diet habits and keep track of your nutrition. Click the ";
+
+  let subheading = "Food for thought! Click the articles below for more nutritious info 😋"
 
   function article1() {
     window.open(
@@ -37,10 +36,11 @@ function Home() {
       <NavBar Home={"Home"} />
 
       <section className="hero">
-        <div className="hero-body">
-          <div className="container">
-            <h1 className="title">{heading}</h1>
-            <h2>{subheading}</h2>
+          <div className="hero-body">
+            <div className="container">
+
+                  <h2>{ subheading }</h2>
+            </div>
           </div>
         </div>
 
