@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { createItem } from "../Services/Items.js";
 import "../App.css"
 
-export default function InputModal() {
+export default function InputModal( {display} ) {
   const [item, setItem] = useState({
     Name: "",
     Carbs: "",
