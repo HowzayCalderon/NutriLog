@@ -11,7 +11,6 @@ export default function Today() {
   const [toggle, setToggle] = useState(false);
   const [todaysMeals, setTodaysMeals] = useState([]);
 
-  //   let { id } = useParams();
   let navigate = useNavigate();
 
   useEffect(() => {
@@ -32,11 +31,6 @@ export default function Today() {
     setTodaysMeals(itemCreate);
     display();
   }
-
-  // const display = () => {
-  //   if (!toggle) return setToggle(true);
-  //   return setToggle(false);
-  // };
 
   async function handleDelete(id) {
     await deleteItem(id);
@@ -59,7 +53,7 @@ export default function Today() {
         <BiIcons.BiAddToQueue  />
       </button>
 
-      {toggle ? (<InputModal />
+      {toggle ? (<InputModal setToggle={setToggle}/>
       ) : null}
      
      
@@ -93,7 +87,6 @@ export default function Today() {
                     onClick={() => handleDelete(meal._id)}
                   />
                 </div>
-                {/* <h5>Notes: {meal.Notes}</h5> */}
               </div>
             );
           })}
@@ -104,32 +97,3 @@ export default function Today() {
     </div>
   );
 }
-
-// // creates a date + time for current moment
-// const date = new Date();
-
-// // converts current date + time to milliseconds since Jan 1, 1970
-// const now = date.getTime();
-
-// // wrapper function that will return "today" at 12AM (00:00:00)
-// function resetTime() {
-//   date.setSeconds(0);
-//   date.setMinutes(0);
-//   date.setHours(0);
-//   return date;
-// }
-
-// resetTime();
-
-// // assigns "today" @ 12AM to variable
-// const thisMorning = date.getTime();
-
-// // adds 1 to the "date" of "today at 12AM", creating "tomorrow" @ 12AM
-// date.setDate(date.getDate() + 1);
-
-// // assigns the above to a variable
-// const tomorrowMorning = date.getTime();
-
-// // logic to begin to filter items to today page
-// if (now > thisMorning && now < tomorrowMorning) {
-// }
