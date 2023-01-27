@@ -78,10 +78,10 @@ export default function InputModal( {display} ) {
           value={item.Quantity}
           onChange={handleChange}
         />
-        <button type="submit">Log your item!</button>
+        <input type="submit" value="Log your item!" />
 
         <button onClick={display}>Close</button>
-        
+
         </div>
       </form>
       
