@@ -58,7 +58,7 @@ export default function Today() {
         <BiIcons.BiAddToQueue  />
       </button>
 
-      {toggle ? (<InputModal />
+      {toggle ? (<InputModal setToggle={setToggle}/>
       ) : null}
      
      
