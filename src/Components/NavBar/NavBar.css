@@ -32,6 +32,13 @@ nav{
     transition: color 0.3s ease-out;
     margin-right: 5em;
   }
+
   .navbar-item a:hover {
     color:  white;
   }
+  .navbar-item a:active {
+    color:  white;
+    text-decoration: solid;
+  }
+
+  
