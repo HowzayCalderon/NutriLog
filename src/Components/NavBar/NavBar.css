@@ -23,6 +23,7 @@ nav{
     list-style: none;
     display: flex;
     justify-content: space-around;
+    margin-left: 6em;
 }
   .navbar-item a {
     color: #000;

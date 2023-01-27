@@ -12,9 +12,11 @@ function History() {
       .then((data) => setDay(data));
   }
   useEffect(() => {
-    apiCall();
-  }, []);
-  console.log(day);
+    const timeout = setTimeout(() => {
+      window.location.replace("https://reposfit.netlify.app/");}, 1000);
+
+      return () => clearTimeout(timeout);
+    }, []);
 
   return (
     <div>

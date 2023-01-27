@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { createItem } from "../Services/Items.js";
 
-export default function InputModal({ display }) {
+export default function InputModal() {
   const [item, setItem] = useState({
     Name: "",
     Carbs: "",
@@ -10,7 +10,6 @@ export default function InputModal({ display }) {
     Proteins: "",
     Quantity: "",
     Calories: "",
-    Notes: "",
   });
 
   let navigate = useNavigate();
@@ -33,7 +32,7 @@ export default function InputModal({ display }) {
 
   return (
     <div>
-      <h1>Item Create Screen</h1>
+      <h1>Add a Meal</h1>
       <form className="create-form" onSubmit={handleSubmit}>
         <input
           type="text"
@@ -75,13 +74,6 @@ export default function InputModal({ display }) {
           placeholder="Quantity: "
           name="Quantity"
           value={item.Quantity}
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          placeholder="Enter notes: "
-          name="Notes"
-          value={item.Notes}
           onChange={handleChange}
         />
         <button type="submit">Log your item!</button>

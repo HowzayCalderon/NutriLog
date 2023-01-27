@@ -5,8 +5,7 @@ import './Home.css'
 
 function Home() {
 
-  let heading = "NutriLog"
-  let subheading = "Log your daily diet habits and keep track of your nutrition. Click the "
+  let subheading = "Food for thought! Click the articles below for more nutritious info 😋"
 
   function article1() {
     window.open("https://www.headspace.com/mindfulness/mindful-eating", "_blank")
@@ -31,9 +30,7 @@ function Home() {
       <section className="hero">
           <div className="hero-body">
             <div className="container">
-                <h1 className="title">
-                  { heading }
-                </h1>
+
                   <h2>{ subheading }</h2>
             </div>
           </div>

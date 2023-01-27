@@ -14,7 +14,7 @@ function NavBar() {
             <Link to="/today">Today</Link>
           </li>
           <li className="navbar-item">
-            <Link to="/history">History</Link>
+            <Link to="/fitness">Fitness</Link>
           </li>
         </ul>
       </nav>
