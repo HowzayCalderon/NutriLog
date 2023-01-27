@@ -103,14 +103,7 @@ export default function InputModal({ display }) {
           value={item.Calories}
           onChange={handleChange}
         />
-        <ul> Notes: </ul>
-        <input
-          type="text"
-          placeholder="Enter notes: "
-          name="Notes"
-          value={item.Notes}
-          onChange={handleChange}
-        />
+      
         </div>
         <div className="button">
         <button className='updateButton'onClick={() => updateItem()} type="submit">
