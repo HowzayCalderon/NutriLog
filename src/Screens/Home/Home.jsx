@@ -42,7 +42,6 @@ function Home() {
                   <h2>{ subheading }</h2>
             </div>
           </div>
-        </div>
 
         <div className="photo-gallery">
           <div className="photo-gallery1" onClick={() => article1()}>
