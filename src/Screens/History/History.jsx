@@ -12,15 +12,15 @@ function History() {
   }
   useEffect(() => {
     const timeout = setTimeout(() => {
-      window.location.replace("https://reposfit.netlify.app/");}, 1000);
+      window.location.replace("https://reposfit.netlify.app/");
+    }, 1000);
 
-      return () => clearTimeout(timeout);
-    }, []);
+    return () => clearTimeout(timeout);
+  }, []);
 
   return (
     <div>
       <NavBar History={"History"} />
-      <p>{day[0].Name}</p>
     </div>
   );
 }
