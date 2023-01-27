@@ -11,7 +11,7 @@ export default function Today() {
   const [toggle, setToggle] = useState(false);
   const [todaysMeals, setTodaysMeals] = useState([]);
 
-//   let { id } = useParams();
+  //   let { id } = useParams();
   let navigate = useNavigate();
 
   useEffect(() => {
@@ -51,7 +51,7 @@ export default function Today() {
         <h1>NutriLog</h1>
       </div>
       <div className="navbar-container">
-        <NavBar />
+        <NavBar Today={"Today"} />
       </div>
 
       <button className="entry-btn" onClick={() => display()}>
