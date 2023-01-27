@@ -11,7 +11,7 @@ export default function Today() {
   const [toggle, setToggle] = useState(false);
   const [todaysMeals, setTodaysMeals] = useState([]);
 
-//   let { id } = useParams();
+  //   let { id } = useParams();
   let navigate = useNavigate();
 
   useEffect(() => {
@@ -22,10 +22,21 @@ export default function Today() {
     fetchItems();
   }, []);
 
-  const display = () => {
-    if (!toggle) return setToggle(true);
-    return setToggle(false);
-  };
+  //modal
+  function display() {
+    console.log("clicked")
+    setToggle((prev) => !prev);
+  }
+    //modal
+  function handleClick(itemCreate) {
+    setTodaysMeals(itemCreate);
+    display();
+  }
+
+  // const display = () => {
+  //   if (!toggle) return setToggle(true);
+  //   return setToggle(false);
+  // };
 
   async function handleDelete(id) {
     await deleteItem(id);
@@ -40,14 +51,17 @@ export default function Today() {
         <h1>NutriLog</h1>
       </div>
       <div className="navbar-container">
-        <NavBar />
+        <NavBar Today={"Today"} />
       </div>
 
-      <button className="entry-btn">
-        <BiIcons.BiAddToQueue onClick={() => display()} />
+      <button className="entry-btn" onClick={() => display()}>
+        <BiIcons.BiAddToQueue  />
       </button>
 
-      {toggle && <InputModal display={display} />}
+      {toggle ? (<InputModal />
+      ) : null}
+     
+     
 
       <div className="todaysEntry">
         <div className="categories">
@@ -61,7 +75,7 @@ export default function Today() {
         <div className="listItem-container">
           {todaysMeals.map((meal) => {
             return (
-              <div className="ListItem">
+              <div className="ListItem" key={meal._id}>
                 <h5 id="m-name">{meal.Name}</h5>
                 <h5 id="m-carbs">{meal.Carbs}</h5>
                 <h5 id="m-pro">{meal.Proteins}</h5>

@@ -6,9 +6,9 @@ nav{
 .navbar-div {
     display: flex;
     justify-content: center;
-    width: 80%;
+    /* width: 20em; */
     height: 75px;
-    overflow: hidden;
+    /* overflow: hidden; */
     color:black;
     font-weight: 800;
     border-bottom: solid black;
@@ -26,20 +26,50 @@ nav{
     margin-left: 6em;
 }
   .navbar-item a {
+    color: black;
+    font-size: 2rem;
+    margin: 2em;
+    font-weight: 400;
+    text-decoration: none;
+    transition: color 0.3s ease-out;
+
+  }
+
+  .navbar-item a:hover {
+    color:  rgb(91, 192, 222);
+  }
+  .navbar-item a:after {
+    color: rgb(91, 192, 222);
+    text-decoration: solid;
+  }
+
+  #Home{
+    color: rgb(91, 192, 222);
+    font-size: 2rem;
+    font-weight: 400;
+    text-decoration-line: underline;
+    text-decoration-thickness: 5px;
+    text-underline-offset: 5px;
+    transition: color 0.3s ease-out;
+  }
+
+  #Today{
+    color: rgb(91, 192, 222);
+    font-size: 2rem;
+    font-weight: 400;
+    text-decoration-line: underline;
+    text-decoration-thickness: 5px;
+    text-underline-offset: 5px;
+    transition: color 0.3s ease-out;
+  }
+
+  #History{
     color: #000;
     font-size: 2rem;
     font-weight: 400;
     text-decoration: none;
     transition: color 0.3s ease-out;
     margin-right: 5em;
-  }
-
-  .navbar-item a:hover {
-    color:  white;
-  }
-  .navbar-item a:active {
-    color:  white;
-    text-decoration: solid;
   }
 
   

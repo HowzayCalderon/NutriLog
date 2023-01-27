@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { createItem } from "../Services/Items.js";
+import "../App.css"
 
 export default function InputModal() {
   const [item, setItem] = useState({
@@ -34,6 +35,7 @@ export default function InputModal() {
     <div>
       <h1>Add a Meal</h1>
       <form className="create-form" onSubmit={handleSubmit}>
+        <div className="modal-content">
         <input
           type="text"
           placeholder="Enter item: "
@@ -77,7 +79,13 @@ export default function InputModal() {
           onChange={handleChange}
         />
         <button type="submit">Log your item!</button>
+
+        <button onClick={display}>Close</button>
+        
+        </div>
       </form>
+      
     </div>
+    
   );
 }

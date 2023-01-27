@@ -3,7 +3,6 @@ import api from "./apiConfig.js";
 export const getItems = async() => {     
     try{
         const response = await api.get("/items");
-        console.log(response);
         return response.data;
     } catch (error) {
         throw error;
