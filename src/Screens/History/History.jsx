@@ -1,4 +1,3 @@
-
 import React from "react";
 import { useEffect, useState } from "react";
 import NavBar from "../../Components/NavBar/NavBar.jsx";
@@ -18,7 +17,7 @@ function History() {
 
   return (
     <div>
-      <NavBar />
+      <NavBar History={"History"} />
       <p>{day[0].Name}</p>
     </div>
   );
