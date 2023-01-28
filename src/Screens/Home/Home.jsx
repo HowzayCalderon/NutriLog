@@ -33,7 +33,9 @@ function Home() {
       <div className="nutrilog">
         <h1>NutriLog</h1>
       </div>
-      <NavBar Home={"Home"} />
+      <div className="navbar-container">
+        <NavBar Home={"Home"} />
+      </div>
 
       <section className="hero">
           <div className="hero-body">

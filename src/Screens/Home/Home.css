@@ -11,6 +11,12 @@ h2 {
     flex-direction: column;
 }
 
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .photo-gallery1, .photo-gallery2, .photo-gallery3 {
     display: flex;
     padding: 3%;
