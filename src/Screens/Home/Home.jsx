@@ -57,7 +57,7 @@ function Home() {
               Ultimately, this means we have a better chance of understanding
               what foods nourish us and what foods help us stay healthy while
               also encouraging a deeper appreciation of every meal, every
-              mouthful, and every ingredient <span> . . .</span>
+              mouthful, and every ingredient <span> . . . . . .</span>
             </p>
           </div>
 
@@ -75,7 +75,7 @@ function Home() {
               on auto-pilot, distracted by thoughts, feelings, and
               inner-dialogue. In fact, of all the tasks we do in our daily
               lives, cooking offers a wonderful opportunity for us to train the
-              mind to be present<span> . . .</span>
+              mind to be present<span> . . . . . .</span>
             </p>
           </div>
 
@@ -91,7 +91,7 @@ function Home() {
               pleasure in life and the things our body lets us experience. But
               when we struggle with our body image, we might find that
               relationship gets tricky. Moving through our days confidently or
-              caring for ourselves can be challenging <span> . . .</span>
+              caring for ourselves can be challenging <span> . . . . . .</span>
             </p>
           </div>
         </div>
