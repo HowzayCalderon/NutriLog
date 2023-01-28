@@ -1,6 +1,7 @@
 *{
     margin: 10px;
 }
+
 .ListItem {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -13,24 +14,34 @@
     width: 90vw;
     display: flex;
     flex-direction: column;
-    border: solid rgb(36, 110, 133);
+    border: solid rgb(62, 129, 149);
 }
 
 .categories{
-    border-bottom: solid black;
+    border-bottom: solid rgb(62, 129, 149);
     position: sticky;
     background-color: white;
     top: 0px;
     display: grid;
     grid-template-columns: repeat(6, 1.5fr);
     margin-bottom: 2em;
+    margin-left: 2em;
+    max-width: 87vw;
 }
-
 
 .icon{
     color: black;
     cursor: pointer;
 }
+
+h3, h5 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h3 {
+    font-weight: 500;
+}
+
 .entry-btn{
     background-color: rgb(91, 192, 222);
     border: solid rgb(91, 192, 222);
@@ -39,7 +50,7 @@
     height: 2em;
     font-size: 1.5em;
     color: white;
-    margin: 1.5em 0 1.5em 0;
+    margin: 1.5em 0 1.5em .85em;
 }
 
 .navbar-container{

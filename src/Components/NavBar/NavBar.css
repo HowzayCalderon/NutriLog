@@ -11,7 +11,7 @@ nav{
     /* overflow: hidden; */
     color:black;
     font-weight: 800;
-    border-bottom: solid black;
+    border-bottom: solid rgb(62, 129, 149);
     /* position: fixed;
     top: 15em; */
     background: transparent;
@@ -47,7 +47,7 @@ nav{
     font-size: 2rem;
     font-weight: 400;
     text-decoration-line: underline;
-    text-decoration-thickness: 5px;
+    text-decoration-thickness: 6px;
     text-underline-offset: 8px;
     transition: color 0.3s ease-out;
   }
@@ -57,7 +57,7 @@ nav{
     font-size: 2rem;
     font-weight: 400;
     text-decoration-line: underline;
-    text-decoration-thickness: 5px;
+    text-decoration-thickness: 6px;
     text-underline-offset: 8px;
     transition: color 0.3s ease-out;
   }

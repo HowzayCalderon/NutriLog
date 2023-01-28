@@ -60,12 +60,12 @@ export default function Today() {
 
       <div className="todaysEntry">
         <div className="categories">
-          <h3 id="food-cat">Food Item</h3>
-          <h3 id="carb-cat">Carbohydrate (g)</h3>
-          <h3 id="pro-cat">Protein (g)</h3>
-          <h3 id="fats-cat">Fats (g)</h3>
-          <h3 id="cal-cat">Calories (kJ)</h3>
-          <h3 id="quan-cat">Quantity</h3>
+          <h3 id="cat">Food Item</h3>
+          <h3 id="cat">Carbohydrate (g)</h3>
+          <h3 id="cat">Protein (g)</h3>
+          <h3 id="cat">Fats (g)</h3>
+          <h3 id="cat">Calories (kJ)</h3>
+          <h3 id="cat">Quantity</h3>
         </div>
         <div className="listItem-container">
           {todaysMeals.map((meal) => {

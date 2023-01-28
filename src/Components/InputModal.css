@@ -20,4 +20,6 @@
     z-index: 999;
   }
 
-  
+  h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
