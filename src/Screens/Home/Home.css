@@ -1,21 +1,20 @@
-
-.title {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 500;
-    font-size: 4rem;
-    margin-top: 2rem
-}
-
 h2 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 100;
-    text-shadow: rgb(125, 125, 125) 1px 0 10px;    text-align: center;
-    margin: 2rem 0 2rem 0
+    text-shadow: rgb(125, 125, 125) 1px 0 10px;    
+    text-align: center;
+    margin: 2.5rem 0 2rem 0
 }
 
 .photo-gallery {
     display: flex;
     flex-direction: column;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .photo-gallery1, .photo-gallery2, .photo-gallery3 {

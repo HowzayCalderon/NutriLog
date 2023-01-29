@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { createItem } from "../Services/Items.js";
-import "../App.css"
+import "./InputModal.css"
 
 export default function InputModal( {setToggle} ) {
   const [item, setItem] = useState({
@@ -78,7 +78,7 @@ export default function InputModal( {setToggle} ) {
           value={item.Quantity}
           onChange={handleChange}
         />
-        <input type="submit" value="Log your item!" />
+        <input type="submit" value="Log your item" />
 
         <button onClick={() => setToggle()}>Close</button>
         
