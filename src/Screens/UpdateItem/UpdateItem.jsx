@@ -20,7 +20,7 @@ export default function InputModal({ display }) {
 
   useEffect(() => {
     fetchItem();
-  }, []);
+  },);
 
   async function fetchItem() {
     let oneItem = await getItem(id);

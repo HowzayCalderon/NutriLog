@@ -15,7 +15,7 @@ function NavBar(props) {
           </li>
           <li className="navbar-item">
             <a href="https://reposfit.netlify.app/
-" target="_blank">ReposFit</a>
+" target="_blank" rel="noreferrer">ReposFit</a>
 
           </li>
         </ul>

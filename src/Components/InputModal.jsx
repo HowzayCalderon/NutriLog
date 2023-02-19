@@ -33,33 +33,32 @@ export default function InputModal( {setToggle} ) {
 
   return (
     <div>
-      <h1>Add a Meal</h1>
       <form className="create-form" onSubmit={handleSubmit}>
         <div className="modal-content">
         <input
           type="text"
-          placeholder="Enter item: "
+          placeholder="Enter item "
           name="Name"
           value={item.Name}
           onChange={handleChange}
         />
         <input
           type="number"
-          placeholder="Carbs: "
+          placeholder="Carbs "
           name="Carbs"
           value={item.Carbs}
           onChange={handleChange}
         />
         <input
           type="number"
-          placeholder="Protein: "
+          placeholder="Protein "
           name="Proteins"
           value={item.Proteins}
           onChange={handleChange}
         />
         <input
           type="number"
-          placeholder="Fats: "
+          placeholder="Fats "
           name="Fats"
           value={item.Fats}
           onChange={handleChange}
@@ -73,7 +72,7 @@ export default function InputModal( {setToggle} ) {
         />
         <input
           type="number"
-          placeholder="Quantity: "
+          placeholder="Quantity "
           name="Quantity"
           value={item.Quantity}
           onChange={handleChange}
